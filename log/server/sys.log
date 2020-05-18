@@ -1,0 +1,465 @@
+2020-05-19 01:19:14.681 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.session.SessionManager : 95 ] - SessionManager - startCheckThread : sessionTickTime 5
+2020-05-19 01:19:14.686 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 51 ] - DispatcherServlet start scan action path:com.franco
+2020-05-19 01:19:14.708 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@getInfo 
+2020-05-19 01:19:14.709 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@hitBall 
+2020-05-19 01:19:14.709 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@setAuto 
+2020-05-19 01:19:14.729 [ com.franco.Main.main() ] - [ DEBUG ] [ i.n.util.internal.logging.InternalLoggerFactory : 45 ] - Using SLF4J as the default logging framework
+2020-05-19 01:19:14.731 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.MultithreadEventLoopGroup : 44 ] - -Dio.netty.eventLoopThreads: 4
+2020-05-19 01:19:14.760 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 54 ] - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-05-19 01:19:14.761 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 57 ] - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-05-19 01:19:14.769 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.nio.NioEventLoop : 106 ] - -Dio.netty.noKeySetOptimization: false
+2020-05-19 01:19:14.769 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.nio.NioEventLoop : 107 ] - -Dio.netty.selectorAutoRebuildThreshold: 512
+2020-05-19 01:19:14.791 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 396 ] - -Dio.netty.noUnsafe: false
+2020-05-19 01:19:14.792 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 852 ] - Java version: 11
+2020-05-19 01:19:14.795 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 121 ] - sun.misc.Unsafe.theUnsafe: available
+2020-05-19 01:19:14.796 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 145 ] - sun.misc.Unsafe.copyMemory: available
+2020-05-19 01:19:14.797 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 183 ] - java.nio.Buffer.address: available
+2020-05-19 01:19:14.801 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 253 ] - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:225)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:219)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at com.franco.MyBootStrap.start(MyBootStrap.java:77)
+	at com.franco.Main.main(Main.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-05-19 01:19:14.802 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 314 ] - java.nio.Bits.unaligned: available, true
+2020-05-19 01:19:14.804 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 373 ] - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @5804a316
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:335)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:326)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at com.franco.MyBootStrap.start(MyBootStrap.java:77)
+	at com.franco.Main.main(Main.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-05-19 01:19:14.805 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 386 ] - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2020-05-19 01:19:14.805 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1046 ] - sun.misc.Unsafe: available
+2020-05-19 01:19:14.834 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1146 ] - maxDirectMemory: 994050048 bytes (maybe)
+2020-05-19 01:19:14.835 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1165 ] - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+2020-05-19 01:19:14.835 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1244 ] - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-05-19 01:19:14.836 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 177 ] - -Dio.netty.maxDirectMemory: -1 bytes
+2020-05-19 01:19:14.841 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 184 ] - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-05-19 01:19:14.842 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.CleanerJava9 : 71 ] - java.nio.ByteBuffer.cleaner(): available
+2020-05-19 01:19:14.843 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 204 ] - -Dio.netty.noPreferDirect: false
+2020-05-19 01:19:14.852 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 907 ] - org.jctools-core.MpscChunkedArrayQueue: available
+2020-05-19 01:19:14.899 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.DefaultChannelId : 79 ] - -Dio.netty.processId: 2326 (auto-detected)
+2020-05-19 01:19:14.902 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 139 ] - -Djava.net.preferIPv4Stack: false
+2020-05-19 01:19:14.903 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 140 ] - -Djava.net.preferIPv6Addresses: false
+2020-05-19 01:19:14.905 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 224 ] - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+2020-05-19 01:19:14.906 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 271 ] - /proc/sys/net/core/somaxconn: 128
+2020-05-19 01:19:14.911 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.DefaultChannelId : 101 ] - -Dio.netty.machineId: 52:54:00:ff:fe:68:00:0b (auto-detected)
+2020-05-19 01:19:14.932 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 130 ] - -Dio.netty.leakDetection.level: simple
+2020-05-19 01:19:14.933 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 131 ] - -Dio.netty.leakDetection.targetRecords: 4
+2020-05-19 01:19:14.966 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 156 ] - -Dio.netty.allocator.numHeapArenas: 4
+2020-05-19 01:19:14.967 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 157 ] - -Dio.netty.allocator.numDirectArenas: 4
+2020-05-19 01:19:14.967 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 159 ] - -Dio.netty.allocator.pageSize: 8192
+2020-05-19 01:19:14.967 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 164 ] - -Dio.netty.allocator.maxOrder: 11
+2020-05-19 01:19:14.967 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 168 ] - -Dio.netty.allocator.chunkSize: 16777216
+2020-05-19 01:19:14.967 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 169 ] - -Dio.netty.allocator.tinyCacheSize: 512
+2020-05-19 01:19:14.968 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 170 ] - -Dio.netty.allocator.smallCacheSize: 256
+2020-05-19 01:19:14.968 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 171 ] - -Dio.netty.allocator.normalCacheSize: 64
+2020-05-19 01:19:14.968 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 172 ] - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-05-19 01:19:14.968 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 173 ] - -Dio.netty.allocator.cacheTrimInterval: 8192
+2020-05-19 01:19:14.968 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 174 ] - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2020-05-19 01:19:14.969 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 175 ] - -Dio.netty.allocator.useCacheForAllThreads: true
+2020-05-19 01:19:14.969 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 176 ] - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2020-05-19 01:19:14.980 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 86 ] - -Dio.netty.allocator.type: pooled
+2020-05-19 01:19:14.981 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 95 ] - -Dio.netty.threadLocalDirectBufferSize: 0
+2020-05-19 01:19:14.981 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 98 ] - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2020-05-19 01:28:33.704 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 97 ] - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2020-05-19 01:28:33.705 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 98 ] - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2020-05-19 01:28:33.705 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 99 ] - -Dio.netty.recycler.linkCapacity: 16
+2020-05-19 01:28:33.706 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 100 ] - -Dio.netty.recycler.ratio: 8
+2020-05-19 01:28:33.717 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.buffer.AbstractByteBuf : 63 ] - -Dio.netty.buffer.checkAccessible: true
+2020-05-19 01:28:33.717 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.buffer.AbstractByteBuf : 64 ] - -Dio.netty.buffer.checkBounds: true
+2020-05-19 01:28:33.719 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetectorFactory : 195 ] - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6abbe952
+2020-05-19 01:33:11.462 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.session.SessionManager : 95 ] - SessionManager - startCheckThread : sessionTickTime 5
+2020-05-19 01:33:11.466 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 51 ] - DispatcherServlet start scan action path:com.franco
+2020-05-19 01:33:11.485 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@getInfo 
+2020-05-19 01:33:11.486 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@hitBall 
+2020-05-19 01:33:11.486 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@setAuto 
+2020-05-19 01:33:11.493 [ com.franco.Main.main() ] - [ DEBUG ] [ i.n.util.internal.logging.InternalLoggerFactory : 45 ] - Using SLF4J as the default logging framework
+2020-05-19 01:33:11.496 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.MultithreadEventLoopGroup : 44 ] - -Dio.netty.eventLoopThreads: 4
+2020-05-19 01:33:11.514 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 54 ] - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-05-19 01:33:11.514 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 57 ] - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-05-19 01:33:11.522 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.nio.NioEventLoop : 106 ] - -Dio.netty.noKeySetOptimization: false
+2020-05-19 01:33:11.523 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.nio.NioEventLoop : 107 ] - -Dio.netty.selectorAutoRebuildThreshold: 512
+2020-05-19 01:33:11.539 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 396 ] - -Dio.netty.noUnsafe: false
+2020-05-19 01:33:11.539 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 852 ] - Java version: 11
+2020-05-19 01:33:11.541 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 121 ] - sun.misc.Unsafe.theUnsafe: available
+2020-05-19 01:33:11.542 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 145 ] - sun.misc.Unsafe.copyMemory: available
+2020-05-19 01:33:11.543 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 183 ] - java.nio.Buffer.address: available
+2020-05-19 01:33:11.545 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 253 ] - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:225)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:219)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at com.franco.MyBootStrap.start(MyBootStrap.java:77)
+	at com.franco.Main.main(Main.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-05-19 01:33:11.546 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 314 ] - java.nio.Bits.unaligned: available, true
+2020-05-19 01:33:11.548 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 373 ] - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @ab60c3b
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:335)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:326)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at com.franco.MyBootStrap.start(MyBootStrap.java:77)
+	at com.franco.Main.main(Main.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-05-19 01:33:11.549 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 386 ] - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2020-05-19 01:33:11.549 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1046 ] - sun.misc.Unsafe: available
+2020-05-19 01:33:11.579 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1146 ] - maxDirectMemory: 994050048 bytes (maybe)
+2020-05-19 01:33:11.580 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1165 ] - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+2020-05-19 01:33:11.580 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1244 ] - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-05-19 01:33:11.581 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 177 ] - -Dio.netty.maxDirectMemory: -1 bytes
+2020-05-19 01:33:11.581 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 184 ] - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-05-19 01:33:11.582 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.CleanerJava9 : 71 ] - java.nio.ByteBuffer.cleaner(): available
+2020-05-19 01:33:11.583 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 204 ] - -Dio.netty.noPreferDirect: false
+2020-05-19 01:33:11.592 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 907 ] - org.jctools-core.MpscChunkedArrayQueue: available
+2020-05-19 01:33:11.633 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.DefaultChannelId : 79 ] - -Dio.netty.processId: 6995 (auto-detected)
+2020-05-19 01:33:11.636 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 139 ] - -Djava.net.preferIPv4Stack: false
+2020-05-19 01:33:11.636 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 140 ] - -Djava.net.preferIPv6Addresses: false
+2020-05-19 01:33:11.638 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 224 ] - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+2020-05-19 01:33:11.639 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 271 ] - /proc/sys/net/core/somaxconn: 128
+2020-05-19 01:33:11.641 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.DefaultChannelId : 101 ] - -Dio.netty.machineId: 52:54:00:ff:fe:68:00:0b (auto-detected)
+2020-05-19 01:33:11.654 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 130 ] - -Dio.netty.leakDetection.level: simple
+2020-05-19 01:33:11.654 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 131 ] - -Dio.netty.leakDetection.targetRecords: 4
+2020-05-19 01:33:11.697 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 156 ] - -Dio.netty.allocator.numHeapArenas: 4
+2020-05-19 01:33:11.698 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 157 ] - -Dio.netty.allocator.numDirectArenas: 4
+2020-05-19 01:33:11.698 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 159 ] - -Dio.netty.allocator.pageSize: 8192
+2020-05-19 01:33:11.698 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 164 ] - -Dio.netty.allocator.maxOrder: 11
+2020-05-19 01:33:11.699 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 168 ] - -Dio.netty.allocator.chunkSize: 16777216
+2020-05-19 01:33:11.699 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 169 ] - -Dio.netty.allocator.tinyCacheSize: 512
+2020-05-19 01:33:11.699 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 170 ] - -Dio.netty.allocator.smallCacheSize: 256
+2020-05-19 01:33:11.699 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 171 ] - -Dio.netty.allocator.normalCacheSize: 64
+2020-05-19 01:33:11.699 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 172 ] - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-05-19 01:33:11.699 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 173 ] - -Dio.netty.allocator.cacheTrimInterval: 8192
+2020-05-19 01:33:11.700 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 174 ] - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2020-05-19 01:33:11.700 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 175 ] - -Dio.netty.allocator.useCacheForAllThreads: true
+2020-05-19 01:33:11.700 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 176 ] - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2020-05-19 01:33:11.708 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 86 ] - -Dio.netty.allocator.type: pooled
+2020-05-19 01:33:11.708 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 95 ] - -Dio.netty.threadLocalDirectBufferSize: 0
+2020-05-19 01:33:11.709 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 98 ] - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2020-05-19 01:33:23.255 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 97 ] - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2020-05-19 01:33:23.256 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 98 ] - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2020-05-19 01:33:23.257 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 99 ] - -Dio.netty.recycler.linkCapacity: 16
+2020-05-19 01:33:23.257 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 100 ] - -Dio.netty.recycler.ratio: 8
+2020-05-19 01:33:23.265 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.buffer.AbstractByteBuf : 63 ] - -Dio.netty.buffer.checkAccessible: true
+2020-05-19 01:33:23.266 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.buffer.AbstractByteBuf : 64 ] - -Dio.netty.buffer.checkBounds: true
+2020-05-19 01:33:23.267 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetectorFactory : 195 ] - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@15f9d8c5
+2020-05-19 01:38:26.457 [ pool-1-thread-1 ] - [ DEBUG ] [ com.franco.spring.session.SessionManager : 79 ] - SessionManager invalidate session : 5B6BFCD446009A267026CF374ADEC611
+2020-05-19 01:40:13.824 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.session.SessionManager : 95 ] - SessionManager - startCheckThread : sessionTickTime 5
+2020-05-19 01:40:13.828 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 51 ] - DispatcherServlet start scan action path:com.franco
+2020-05-19 01:40:13.844 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@getInfo 
+2020-05-19 01:40:13.847 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@hitBall 
+2020-05-19 01:40:13.848 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@setAuto 
+2020-05-19 01:40:13.855 [ com.franco.Main.main() ] - [ DEBUG ] [ i.n.util.internal.logging.InternalLoggerFactory : 45 ] - Using SLF4J as the default logging framework
+2020-05-19 01:40:13.857 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.MultithreadEventLoopGroup : 44 ] - -Dio.netty.eventLoopThreads: 4
+2020-05-19 01:40:13.881 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 54 ] - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-05-19 01:40:13.882 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 57 ] - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-05-19 01:40:13.892 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.nio.NioEventLoop : 106 ] - -Dio.netty.noKeySetOptimization: false
+2020-05-19 01:40:13.893 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.nio.NioEventLoop : 107 ] - -Dio.netty.selectorAutoRebuildThreshold: 512
+2020-05-19 01:40:13.916 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 396 ] - -Dio.netty.noUnsafe: false
+2020-05-19 01:40:13.916 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 852 ] - Java version: 11
+2020-05-19 01:40:13.918 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 121 ] - sun.misc.Unsafe.theUnsafe: available
+2020-05-19 01:40:13.919 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 145 ] - sun.misc.Unsafe.copyMemory: available
+2020-05-19 01:40:13.919 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 183 ] - java.nio.Buffer.address: available
+2020-05-19 01:40:13.923 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 253 ] - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:225)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:219)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at com.franco.MyBootStrap.start(MyBootStrap.java:77)
+	at com.franco.Main.main(Main.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-05-19 01:40:13.925 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 314 ] - java.nio.Bits.unaligned: available, true
+2020-05-19 01:40:13.926 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 373 ] - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @771e2381
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:335)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:326)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at com.franco.MyBootStrap.start(MyBootStrap.java:77)
+	at com.franco.Main.main(Main.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-05-19 01:40:13.927 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 386 ] - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2020-05-19 01:40:13.928 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1046 ] - sun.misc.Unsafe: available
+2020-05-19 01:40:13.951 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1146 ] - maxDirectMemory: 994050048 bytes (maybe)
+2020-05-19 01:40:13.952 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1165 ] - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+2020-05-19 01:40:13.952 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1244 ] - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-05-19 01:40:13.953 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 177 ] - -Dio.netty.maxDirectMemory: -1 bytes
+2020-05-19 01:40:13.954 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 184 ] - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-05-19 01:40:13.955 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.CleanerJava9 : 71 ] - java.nio.ByteBuffer.cleaner(): available
+2020-05-19 01:40:13.956 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 204 ] - -Dio.netty.noPreferDirect: false
+2020-05-19 01:40:13.966 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 907 ] - org.jctools-core.MpscChunkedArrayQueue: available
+2020-05-19 01:40:14.007 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.DefaultChannelId : 79 ] - -Dio.netty.processId: 27095 (auto-detected)
+2020-05-19 01:40:14.010 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 139 ] - -Djava.net.preferIPv4Stack: false
+2020-05-19 01:40:14.011 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 140 ] - -Djava.net.preferIPv6Addresses: false
+2020-05-19 01:40:14.013 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 224 ] - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+2020-05-19 01:40:14.014 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 271 ] - /proc/sys/net/core/somaxconn: 128
+2020-05-19 01:40:14.018 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.DefaultChannelId : 101 ] - -Dio.netty.machineId: 52:54:00:ff:fe:68:00:0b (auto-detected)
+2020-05-19 01:40:14.035 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 130 ] - -Dio.netty.leakDetection.level: simple
+2020-05-19 01:40:14.036 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 131 ] - -Dio.netty.leakDetection.targetRecords: 4
+2020-05-19 01:40:14.066 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 156 ] - -Dio.netty.allocator.numHeapArenas: 4
+2020-05-19 01:40:14.066 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 157 ] - -Dio.netty.allocator.numDirectArenas: 4
+2020-05-19 01:40:14.066 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 159 ] - -Dio.netty.allocator.pageSize: 8192
+2020-05-19 01:40:14.067 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 164 ] - -Dio.netty.allocator.maxOrder: 11
+2020-05-19 01:40:14.067 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 168 ] - -Dio.netty.allocator.chunkSize: 16777216
+2020-05-19 01:40:14.067 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 169 ] - -Dio.netty.allocator.tinyCacheSize: 512
+2020-05-19 01:40:14.067 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 170 ] - -Dio.netty.allocator.smallCacheSize: 256
+2020-05-19 01:40:14.067 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 171 ] - -Dio.netty.allocator.normalCacheSize: 64
+2020-05-19 01:40:14.067 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 172 ] - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-05-19 01:40:14.068 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 173 ] - -Dio.netty.allocator.cacheTrimInterval: 8192
+2020-05-19 01:40:14.068 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 174 ] - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2020-05-19 01:40:14.068 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 175 ] - -Dio.netty.allocator.useCacheForAllThreads: true
+2020-05-19 01:40:14.068 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 176 ] - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2020-05-19 01:40:14.082 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 86 ] - -Dio.netty.allocator.type: pooled
+2020-05-19 01:40:14.082 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 95 ] - -Dio.netty.threadLocalDirectBufferSize: 0
+2020-05-19 01:40:14.082 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 98 ] - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2020-05-19 01:40:44.221 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 97 ] - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2020-05-19 01:40:44.223 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 98 ] - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2020-05-19 01:40:44.223 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 99 ] - -Dio.netty.recycler.linkCapacity: 16
+2020-05-19 01:40:44.223 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 100 ] - -Dio.netty.recycler.ratio: 8
+2020-05-19 01:40:44.233 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.buffer.AbstractByteBuf : 63 ] - -Dio.netty.buffer.checkAccessible: true
+2020-05-19 01:40:44.234 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.buffer.AbstractByteBuf : 64 ] - -Dio.netty.buffer.checkBounds: true
+2020-05-19 01:40:44.235 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetectorFactory : 195 ] - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4e319734
+2020-05-19 01:45:02.889 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.session.SessionManager : 95 ] - SessionManager - startCheckThread : sessionTickTime 5
+2020-05-19 01:45:02.893 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 51 ] - DispatcherServlet start scan action path:com.franco
+2020-05-19 01:45:02.913 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@getInfo 
+2020-05-19 01:45:02.914 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@hitBall 
+2020-05-19 01:45:02.914 [ com.franco.Main.main() ] - [ INFO  ] [ com.franco.spring.servlet.DispatcherServlet : 117 ] - bind action : com.franco.balloon.action.BalloonAction, with found command : ball@setAuto 
+2020-05-19 01:45:02.921 [ com.franco.Main.main() ] - [ DEBUG ] [ i.n.util.internal.logging.InternalLoggerFactory : 45 ] - Using SLF4J as the default logging framework
+2020-05-19 01:45:02.923 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.MultithreadEventLoopGroup : 44 ] - -Dio.netty.eventLoopThreads: 4
+2020-05-19 01:45:02.944 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 54 ] - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-05-19 01:45:02.945 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 57 ] - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-05-19 01:45:02.955 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.nio.NioEventLoop : 106 ] - -Dio.netty.noKeySetOptimization: false
+2020-05-19 01:45:02.955 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.nio.NioEventLoop : 107 ] - -Dio.netty.selectorAutoRebuildThreshold: 512
+2020-05-19 01:45:02.973 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 396 ] - -Dio.netty.noUnsafe: false
+2020-05-19 01:45:02.974 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 852 ] - Java version: 11
+2020-05-19 01:45:02.975 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 121 ] - sun.misc.Unsafe.theUnsafe: available
+2020-05-19 01:45:02.976 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 145 ] - sun.misc.Unsafe.copyMemory: available
+2020-05-19 01:45:02.976 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 183 ] - java.nio.Buffer.address: available
+2020-05-19 01:45:02.982 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 253 ] - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:225)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:219)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at com.franco.MyBootStrap.start(MyBootStrap.java:77)
+	at com.franco.Main.main(Main.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-05-19 01:45:02.984 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 314 ] - java.nio.Bits.unaligned: available, true
+2020-05-19 01:45:02.985 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 373 ] - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @555f0b7a
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:335)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:326)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at com.franco.MyBootStrap.start(MyBootStrap.java:77)
+	at com.franco.Main.main(Main.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-05-19 01:45:02.986 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 386 ] - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2020-05-19 01:45:02.986 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1046 ] - sun.misc.Unsafe: available
+2020-05-19 01:45:03.026 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1146 ] - maxDirectMemory: 994050048 bytes (maybe)
+2020-05-19 01:45:03.027 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1165 ] - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+2020-05-19 01:45:03.027 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 1244 ] - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-05-19 01:45:03.028 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 177 ] - -Dio.netty.maxDirectMemory: -1 bytes
+2020-05-19 01:45:03.029 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 184 ] - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-05-19 01:45:03.030 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.CleanerJava9 : 71 ] - java.nio.ByteBuffer.cleaner(): available
+2020-05-19 01:45:03.031 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 204 ] - -Dio.netty.noPreferDirect: false
+2020-05-19 01:45:03.041 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 907 ] - org.jctools-core.MpscChunkedArrayQueue: available
+2020-05-19 01:45:03.085 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.DefaultChannelId : 79 ] - -Dio.netty.processId: 7907 (auto-detected)
+2020-05-19 01:45:03.088 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 139 ] - -Djava.net.preferIPv4Stack: false
+2020-05-19 01:45:03.088 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 140 ] - -Djava.net.preferIPv6Addresses: false
+2020-05-19 01:45:03.090 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 224 ] - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+2020-05-19 01:45:03.091 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.NetUtil : 271 ] - /proc/sys/net/core/somaxconn: 128
+2020-05-19 01:45:03.095 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.channel.DefaultChannelId : 101 ] - -Dio.netty.machineId: 52:54:00:ff:fe:68:00:0b (auto-detected)
+2020-05-19 01:45:03.110 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 130 ] - -Dio.netty.leakDetection.level: simple
+2020-05-19 01:45:03.111 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 131 ] - -Dio.netty.leakDetection.targetRecords: 4
+2020-05-19 01:45:03.142 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 156 ] - -Dio.netty.allocator.numHeapArenas: 4
+2020-05-19 01:45:03.142 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 157 ] - -Dio.netty.allocator.numDirectArenas: 4
+2020-05-19 01:45:03.143 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 159 ] - -Dio.netty.allocator.pageSize: 8192
+2020-05-19 01:45:03.143 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 164 ] - -Dio.netty.allocator.maxOrder: 11
+2020-05-19 01:45:03.152 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 168 ] - -Dio.netty.allocator.chunkSize: 16777216
+2020-05-19 01:45:03.153 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 169 ] - -Dio.netty.allocator.tinyCacheSize: 512
+2020-05-19 01:45:03.154 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 170 ] - -Dio.netty.allocator.smallCacheSize: 256
+2020-05-19 01:45:03.155 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 171 ] - -Dio.netty.allocator.normalCacheSize: 64
+2020-05-19 01:45:03.155 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 172 ] - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-05-19 01:45:03.155 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 173 ] - -Dio.netty.allocator.cacheTrimInterval: 8192
+2020-05-19 01:45:03.155 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 174 ] - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2020-05-19 01:45:03.155 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 175 ] - -Dio.netty.allocator.useCacheForAllThreads: true
+2020-05-19 01:45:03.156 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 176 ] - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2020-05-19 01:45:03.165 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 86 ] - -Dio.netty.allocator.type: pooled
+2020-05-19 01:45:03.166 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 95 ] - -Dio.netty.threadLocalDirectBufferSize: 0
+2020-05-19 01:45:03.166 [ com.franco.Main.main() ] - [ DEBUG ] [ io.netty.buffer.ByteBufUtil : 98 ] - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2020-05-19 01:45:15.717 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 97 ] - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2020-05-19 01:45:15.719 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 98 ] - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2020-05-19 01:45:15.719 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 99 ] - -Dio.netty.recycler.linkCapacity: 16
+2020-05-19 01:45:15.719 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.Recycler : 100 ] - -Dio.netty.recycler.ratio: 8
+2020-05-19 01:45:15.728 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.buffer.AbstractByteBuf : 63 ] - -Dio.netty.buffer.checkAccessible: true
+2020-05-19 01:45:15.728 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.buffer.AbstractByteBuf : 64 ] - -Dio.netty.buffer.checkBounds: true
+2020-05-19 01:45:15.729 [ nioEventLoopGroup-3-1 ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetectorFactory : 195 ] - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@8682457

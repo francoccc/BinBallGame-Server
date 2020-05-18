@@ -28,6 +28,7 @@ public class BalloonService implements IBalloonService {
         moveData.s1 = 1;
         moveData.s2 = 2;
         moveData.calcPushPos();
+        moveData.calcPushTime();
     }
 
     /**
@@ -50,6 +51,15 @@ public class BalloonService implements IBalloonService {
         JSONObject json = new JSONObject();
         json.put("count", pa.getCount());
         line.listAll(json);
+        return json.toJSONString().getBytes();
+    }
+
+    @Override
+    public byte[] addNum(int playerId, int num) {
+        PlayerActivity pa = createIfNotExistPa(playerId);
+        pa.setCount(pa.getCount() + num);
+        JSONObject json = new JSONObject();
+        json.put("count", pa.getCount());
         return json.toJSONString().getBytes();
     }
 
@@ -90,15 +100,19 @@ public class BalloonService implements IBalloonService {
         if (pa.getCount() <= 0) {
             return "{msg:\"参数错误\"}".getBytes();
         }
+        int index = lines.get(playerId).contain(bid);
+        if (index < 0) {
+            return "{msg:\"参数错误\"}".getBytes();
+        }
         pa.setAuto(1);
         isAutos.add(playerId);
         JSONObject json = new JSONObject();
         json.put("isAuto", 1);
-        addAutoPushTask(lines.get(playerId), bid);
+        addAutoPushTask(lines.get(playerId), index);
         return json.toJSONString().getBytes();
     }
 
-    private void addAutoPushTask(BalloonLine line, int bid) {
+    private void addAutoPushTask(BalloonLine line, int index) {
         PlayerActivity pa = createIfNotExistPa(line.playerId);
         if (pa.getCount() <= 0) {
             isAutos.remove(line.playerId);
@@ -106,13 +120,16 @@ public class BalloonService implements IBalloonService {
             return;
         }
         // 得到下一次的时间
-        Tuple<Long, BalloonLine.Balloon> tuple = line.pushTime(bid);
+        final Tuple<Long, Integer> tuple = line.pushTime(index);
         JSONObject json = new JSONObject();
-        if (tuple.right.equals(line.tail())) {
+        if (index == line.size()) {
+            // 不够了
             line.make();
-            line.pushTime(bid);
             line.listAll(json);
             Constants.push(line.playerId, json);
+            Tuple<Long, Integer> newTuple = line.pushTime();
+            tuple.left = newTuple.left;
+            tuple.right = newTuple.right;
         }
         Constants.timer.schedule(new TimerTask() {
             @Override
@@ -122,14 +139,13 @@ public class BalloonService implements IBalloonService {
         }, new Date(tuple.left));
     }
 
-    private void doPush(BalloonLine line, BalloonLine.Balloon balloon) {
-        if (balloon.hitBy(createIfNotExistPa(line.playerId))) {
+    private void doPush(BalloonLine line, int index) {
+        if (line.hitByIndex(createIfNotExistPa(line.playerId), index)) {
             JSONObject json = new JSONObject();
             json.put("hit", 1);
-            json.put("id", balloon.id);
             Constants.push(line.playerId, json);
         }
-        addAutoPushTask(line, balloon.id);
+        addAutoPushTask(line, (index + 1) % line.size());
     }
 
 

@@ -37,6 +37,6 @@ public class BalloonAction extends BaseAction {
     @Command("ball@setAuto")
     public ByteResult setAuto(@RequestParam("playerId") int playerId, @RequestParam("bid") int bid, Request request) {
         Constants.sessions.put(playerId, request.getSession());
-        return getResult(balloonService.hitBalloon(playerId, bid), request);
+        return getResult(balloonService.setAuto(playerId, bid), request);
     }
 }

@@ -36,20 +36,18 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
     }
 
     public void make() {
-        size = 0;
+        filterOldValues();
         fillUpToCapacity();
     }
 
     public Balloon tail() {
-        return elem[rear];
+        if (size > 0) {
+            return elem[dec(rear)];
+        }
+        return null;
     }
 
-    private void fillUpToCapacity() {
-        filterOldBalloon();
-        generateNewBalloon();
-    }
-
-    private void filterOldBalloon() {
+    private void filterOldValues() {
         long now = System.currentTimeMillis();
         if (startTime == 0) {
             startTime = now;
@@ -58,17 +56,15 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
         while(peek() != null
                 && peek().measurePos(l, null) < 0) {
             assert peek() != null;
-            this.startTime += peek().interval;
-            remove(peek());
+            poll();
         }
     }
 
-    private void generateNewBalloon() {
+    private void fillUpToCapacity() {
         if (size == 0) {
             this.startTime = System.currentTimeMillis();
         }
-        float t = 0;
-        Balloon prev = elem[rear];
+        Balloon prev = tail();
         while(size < elem.length) {
             Balloon b = new Balloon(this, prev);
             prev = b;
@@ -81,15 +77,17 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
         return new Iterator<>() {
 
             private int i = dec(front);
+            private int cursor = 0;
 
             @Override
             public boolean hasNext() {
-                return inc(i) != rear;
+                return cursor != size;
             }
 
             @Override
             public Balloon next() {
                 i = inc(i);
+                cursor++;
                 return elem[i];
             }
 
@@ -110,7 +108,7 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
     }
 
     private int dec(int i) {
-        return --i % elem.length;
+        return (--i + elem.length) % elem.length;
     }
 
     @Override
@@ -154,24 +152,58 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
     public void listAll(JSONObject jsonObject) {
         float l = data.l - (data.v * (System.currentTimeMillis() - startTime)) / 1000;
         List<BalloonMessage> msg = new ArrayList<>();
-        for(Balloon balloon : elem) {
-           balloon.measurePos(l, msg);
+        Iterator<Balloon> iter = iterator();
+        while(iter.hasNext()) {
+            Balloon balloon = iter.next();
+            balloon.measurePos(l, msg);
         }
+        jsonObject.put("balloons", msg);
     }
 
-    public Tuple<Long, Balloon> pushTime(int bid) {
+    public Tuple<Long, Integer> pushTime() {
+        return pushTime(0);
+    }
+
+    public Tuple<Long, Integer> pushTime(int index) {
         float l = data.l - (data.v * (System.currentTimeMillis() - startTime)) / 1000;
-        boolean find = false;
-        for(Balloon balloon : elem) {
-            long time = balloon.measureHitTime(l);
-            if (time > 0 && find) {
-                return new Tuple<>(time, balloon);
+        Iterator<Balloon> iter = iterator();
+        int i = 0;
+        while(iter.hasNext()) {
+            Balloon balloon = iter.next();
+            if (i > index) {
+                long time = balloon.measureHitTime(l);
+                if (time > 0) {
+                    return new Tuple<>(time, i);
+                }
             }
-            if (bid == balloon.id) {
-                find = true;
-            }
+            i++;
         }
-        return new Tuple<>(elem[rear].measureHitTime(l), tail());
+        return new Tuple<>(tail().measureHitTime(l), size());
+    }
+
+    public int contain(int bid) {
+        Iterator<Balloon> iter = iterator();
+        int index = 0;
+        while(iter.hasNext()) {
+            if (bid == iter.next().id) {
+                return index;
+            }
+            index++;
+        }
+        return -1;
+    }
+
+    public boolean hitByIndex(PlayerActivity pa, int index) {
+        Iterator<Balloon> iter = iterator();
+        int i = 0;
+        while(iter.hasNext()) {
+            Balloon b = iter.next();
+            if (i == index) {
+                return b.hitBy(pa);
+            }
+            i++;
+        }
+        return false;
     }
 
     public boolean hitBy(PlayerActivity pa, int bid) {
@@ -197,6 +229,7 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
         private BalloonLine line;
 
         public Balloon(BalloonLine line, Balloon prev) {
+            this.line = line;
             this.type = randomType();
             float time = randomInterval();
             float intervalDis = time * line.data.v + getSize() / 2;
@@ -205,7 +238,6 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
             }
             this.interval = intervalDis / line.data.v + (prev != null ? prev.interval : 0);
             this.id = BalloonLine.generateId();
-            this.line = line;
         }
 
         public boolean hitBy(PlayerActivity pa) {
@@ -224,6 +256,7 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
                 BalloonMessage m = new BalloonMessage();
                 m.setPos(dis / line.data.l);
                 m.setId(id);
+                msg.add(m);
             }
             return dis / line.data.l;
         }
@@ -231,8 +264,7 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
         private long measureHitTime(float l) {
             float dis = l + interval * line.data.v;
             if (type.equals(Type.SMALL) && dis > line.data.lr) {
-                System.out.println((dis - line.data.lr) / line.data.v);
-                return  (long) ((dis - line.data.lr) / line.data.v * 1000f);
+                return  (long) ((line.data.lrt + interval) * 1000f);
             }
             return 0;
         }
@@ -282,9 +314,14 @@ public class BalloonLine extends AbstractQueue<BalloonLine.Balloon> {
         public float bt;
 
         public float lr;
+        public float lrt;            // 右端到击中点的时间
 
         public void calcPushPos() {
             lr = l / 2 + bt * v - s1 / 2;
+        }
+
+        public void calcPushTime() {
+            lrt = (l / 2 - s1 / 2) / v + bt;
         }
     }
 }

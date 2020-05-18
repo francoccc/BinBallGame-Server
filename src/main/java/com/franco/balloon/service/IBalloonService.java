@@ -5,10 +5,15 @@ public interface IBalloonService {
     /**
      * 获取所有气球信息
      *
-     * @param userId
+     * @param playerId
      * @return
      */
-    byte[] getBalloonInfo(int userId);
+    byte[] getBalloonInfo(int playerId);
+
+    /**
+     * 加次数
+     */
+    byte[] addNum(int playerId, int num);
 
     /**
      * 击中气球

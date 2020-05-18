@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+    <servlet>
+        <servlet-name>mvc</servlet-name>
+        <servlet-class>com.franco.spring.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <props>
+                <property name="scanPackages" type="string">com.franco</property>
+                <property name="actionPackages" type="string">com.franco</property>
+                <property name="historyMsgLen" type="int">100</property>
+                <property name="serverName" type="string">server_3</property>
+            </props>
+        </init-param>
+    </servlet>
+    <netty>
+        <init-param>
+            <props>
+                <property name="ip" type="string">127.0.0.1</property>
+                <property name="tcpPort" type="int">9000</property>
+                <property name="httpPort" type="int">899</property>
+                <property name="bossThread" type="int">4</property>
+                <property name="workerThread" type="int">16</property>
+            </props>
+        </init-param>
+    </netty>
+</conf>
